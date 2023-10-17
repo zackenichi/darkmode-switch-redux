@@ -1,5 +1,7 @@
 import { AppBar, Box, Grid, Toolbar, Typography } from '@mui/material';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
+import { DarkModeSwitch } from '../DarkModeSwitch';
+// import { Android12Switch } from '../Backup/SwitchBackup';
 
 const Header = () => {
   return (
@@ -14,7 +16,8 @@ const Header = () => {
               </Box>
             </Grid>
             <Grid item xs={4} textAlign="right">
-              <Typography>Switch</Typography>
+              <DarkModeSwitch />
+              {/* <Android12Switch /> */}
             </Grid>
           </Grid>
         </Toolbar>
