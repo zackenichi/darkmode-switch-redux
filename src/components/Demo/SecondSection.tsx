@@ -12,10 +12,12 @@ const SecondSection: FC = () => {
       <Grid item xs={12}>
         <BasicTable />
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={12} />
+      <Grid item xs={12} />
+      <Grid item xs={4}>
         <IconTabs />
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={4}>
         <SliderWithLabel />
       </Grid>
     </Grid>

@@ -8,4 +8,14 @@ const colors = {
   cardbg: '#ffffff',
 };
 
+// const darkColors = {
+//   primary: '#0F1419',
+//   secondary: '#96b84f',
+//   background: '#d6c5a9',
+//   warning: '#a63e40',
+//   info: '#e6d8a0',
+//   success: '#2d4e2a',
+//   cardbg: '#e6e6e6',
+// };
+
 export default colors;
