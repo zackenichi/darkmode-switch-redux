@@ -1,5 +1,5 @@
 import { ThemeOptions, createTheme } from '@mui/material/styles';
-import colors from './colors';
+import { lightColors as colors } from './colors';
 
 const componentOverrides: ThemeOptions['components'] = {
   MuiTypography: {
@@ -54,7 +54,7 @@ const componentOverrides: ThemeOptions['components'] = {
   },
 };
 
-const theme = createTheme({
+const lightTheme = createTheme({
   palette: {
     primary: {
       main: colors.primary,
@@ -79,4 +79,4 @@ const theme = createTheme({
   components: componentOverrides,
 });
 
-export { theme };
+export { lightTheme };

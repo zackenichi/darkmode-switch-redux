@@ -1,4 +1,8 @@
 import { Switch } from '@mui/material';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../store';
+import { THEME } from '../../resources/enums/Theme';
+import { setTheme } from '../../store/Reducers';
 
 const SunIcon = () => {
   return (
@@ -37,11 +41,18 @@ const MoonIcon = () => {
 };
 
 const DarkModeSwitch = () => {
+  const dispatch = useDispatch();
+
+  const theme = useSelector((state: RootState) => state.theme.current);
+
+  const handleThemeChange = () => {
+    dispatch(setTheme(theme === THEME.DARK ? THEME.LIGHT : THEME.DARK));
+  };
+
   return (
     <Switch
-      // checked={darkMode}
-      // onChange={handleThemeChange}
-
+      checked={theme === THEME.DARK}
+      onChange={handleThemeChange}
       disableRipple
       sx={{
         transform: 'scale(1.5)',
