@@ -5,9 +5,13 @@ const componentOverrides: ThemeOptions['components'] = {
   MuiTypography: {
     styleOverrides: {
       h1: {
+        textAlign: 'center',
         fontSize: '2.5rem',
         fontWeight: 800,
         color: colors.primary,
+        '@media (max-width: 600px)': {
+          fontSize: '1.5rem',
+        },
       },
       h2: {
         fontSize: '2rem',
@@ -32,14 +36,18 @@ const componentOverrides: ThemeOptions['components'] = {
       },
     },
   },
-  MuiInputBase: {
+  MuiButton: {
     styleOverrides: {
       root: {
-        // height: '2.5rem',
-        borderRadius: '8px',
-        backgroundColor: 'rgba(255, 255, 255, 0.15)',
-        '&:hover': {
-          backgroundColor: 'rgba(255, 255, 255, 0.25)',
+        textTransform: 'none',
+      },
+    },
+  },
+  MuiTableHead: {
+    styleOverrides: {
+      root: {
+        '& th': {
+          fontWeight: 'bold',
         },
       },
     },
